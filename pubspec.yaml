@@ -1,0 +1,5 @@
+name: dogma_connection
+version: 0.0.1
+description: Data connection for Dart
+dev_dependencies:
+  unittest: any
