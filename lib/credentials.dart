@@ -12,3 +12,14 @@ library dogma.connection.credentials;
 
 /// Base class for providing user credentials to authenticate against.
 class Credentials {}
+
+/// Credentials for password based authentication.
+class NetworkCredentials implements Credentials {
+  /// The user name associated with the credentials.
+  final String userName;
+  /// The password associated with the credentials.
+  final String password;
+
+  /// Creates an instance of the [NetworkCredentials] class with the given [userName] and [password].
+  NetworkCredentials(this.userName, this.password);
+}
