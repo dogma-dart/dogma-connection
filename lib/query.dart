@@ -22,6 +22,13 @@ import 'src/expression/expression.dart';
 /// For some data sources not all functionality may be available.
 class Query {
   //---------------------------------------------------------------------
+  // Class variables
+  //---------------------------------------------------------------------
+
+  /// Specifies that the result set of the query should contain all values.
+  static const int noLimit = 0;
+
+  //---------------------------------------------------------------------
   // Member variables
   //---------------------------------------------------------------------
 
@@ -39,9 +46,14 @@ class Query {
   int offset = 0;
   /// The maximum number of results to return from the query.
   ///
+  /// If the value is [noLimit] then the query will attempt to deliver all the
+  /// results.
+  ///
   /// Used in conjunction with [offset] to specify a range of results to return
   /// if applicable.
-  int limit = 0x3fffffff; // \TODO Switch to constant for max smi
+  int limit = noLimit;
+  /// The column to order the results by.
+  String orderBy = '';
   /// An expression representing the criteria for the values requested in the query.
   Expression where;
 
