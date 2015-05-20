@@ -60,9 +60,9 @@ abstract class Connection {
   Future<Null> open(Credentials credentials);
 
   /// Runs the [query] on the data connection.
-  Future<dynamic> query(Query query);
+  Stream<dynamic> query(Query query);
 
   /// Executes the [command] on the data connection.
-  Future<dynamic> execute(Command command);
+  Stream<dynamic> execute(Command command);
 }
 
