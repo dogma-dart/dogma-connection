@@ -4,7 +4,7 @@
 // the LICENSE file.
 
 /// Contains the [Credentials] class.
-library dogma.connection.credentials;
+library dogma_connection.credentials;
 
 //---------------------------------------------------------------------
 // Library contents

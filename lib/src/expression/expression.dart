@@ -4,7 +4,7 @@
 // the LICENSE file.
 
 /// Contains the [Expression] interface.
-library dogma.connection.src.expression.expression;
+library dogma_connection.src.expression.expression;
 
 //---------------------------------------------------------------------
 // Imports

@@ -4,7 +4,7 @@
 // the LICENSE file.
 
 /// Contains the [ConstantExpresion] class.
-library dogma.connection.src.expression.constant_expression;
+library dogma_connection.src.expression.constant_expression;
 
 //---------------------------------------------------------------------
 // Imports

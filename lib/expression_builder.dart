@@ -7,7 +7,7 @@
 ///
 /// The library contains a number of helper functions that simplify the amount
 /// of code required to generate an [Expression].
-library dogma.connection.expression_builder;
+library dogma_connection.expression_builder;
 
 // \TODO Use generic functions if that becomes part of the Dart specification
 

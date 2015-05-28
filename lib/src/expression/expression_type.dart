@@ -4,7 +4,7 @@
 // the LICENSE file.
 
 /// Contains the [ExpressionType] enumeration and some helper methods around it.
-library dogma.connection.src.expression.expression_type;
+library dogma_connection.src.expression.expression_type;
 
 //---------------------------------------------------------------------
 // Library contents

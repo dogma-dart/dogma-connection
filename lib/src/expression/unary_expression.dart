@@ -4,7 +4,7 @@
 // the LICENSE file.
 
 /// Contains the [UnaryExpression] class.
-library dogma.connection.src.expression.unary_expression;
+library dogma_connection.src.expression.unary_expression;
 
 //---------------------------------------------------------------------
 // Imports

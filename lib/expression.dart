@@ -4,7 +4,7 @@
 // the LICENSE file.
 
 /// Contains the [Expression] class as well as its subclasses.
-library dogma.connection.expression;
+library dogma_connection.expression;
 
 //---------------------------------------------------------------------
 // Exports

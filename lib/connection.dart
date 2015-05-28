@@ -4,7 +4,7 @@
 // the LICENSE file.
 
 /// Contains the [Connection] class.
-library dogma.connection;
+library dogma_connection;
 
 //---------------------------------------------------------------------
 // Standard libraries

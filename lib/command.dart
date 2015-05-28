@@ -4,7 +4,7 @@
 // the LICENSE file.
 
 /// Contains the [Command] class.
-library dogma.connection.command;
+library dogma_connection.command;
 
 //---------------------------------------------------------------------
 // Library contents

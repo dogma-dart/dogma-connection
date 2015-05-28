@@ -4,7 +4,7 @@
 // the LICENSE file.
 
 /// Contains the [Query] class.
-library dogma.connection.query;
+library dogma_connection.query;
 
 //---------------------------------------------------------------------
 // Imports

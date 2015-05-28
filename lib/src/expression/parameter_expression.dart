@@ -4,7 +4,7 @@
 // the LICENSE file.
 
 /// Contains the [ParameterExpression] class.
-library dogma.connection.src.expression.parameter_expression;
+library dogma_connection.src.expression.parameter_expression;
 
 //---------------------------------------------------------------------
 // Imports

@@ -4,7 +4,7 @@
 // the LICENSE file.
 
 /// Contains the [BinaryExpression] class.
-library dogma.connection.src.expression.binary_expression;
+library dogma_connection.src.expression.binary_expression;
 
 //---------------------------------------------------------------------
 // Imports
