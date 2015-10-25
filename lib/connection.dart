@@ -45,24 +45,22 @@ export 'package:dogma_connection/query.dart';
 ///     // Create the connection
 ///     var connection = new MyConnection(...);
 ///
-///     // Open the connection
-///     var credentials = new MyCredentials(...);
-///     await connection.open(credentials);
-///
 ///     // Start querying the data source
 ///     var query = new Query('foo');
 ///     var queryValues = await connection.query(query);
 abstract class Connection {
-  /// Opens the connection with the given [credentials].
+  /// Runs the [query] on the data connection.
   ///
-  /// If the connection was successful the [Future] will execute, otherwise an
-  /// [AuthenticationError] will be thrown.
-  Future<Null> open(Credentials credentials);
+  /// The result of the query is a single value.
+  Future<dynamic> query(Query query);
 
   /// Runs the [query] on the data connection.
-  Stream<dynamic> query(Query query);
+  ///
+  /// The result of the query is a list of values.
+  Stream<dynamic> queryAll(Query query);
 
   /// Executes the [command] on the data connection.
-  Stream<dynamic> execute(Command command);
+  ///
+  /// The result of the command is a single value.
+  Future<dynamic> execute(Command command);
 }
-
