@@ -30,7 +30,7 @@ import 'expression_type.dart';
 /// Here is an example of an equality expression, where (a == 1).
 ///
 ///     var aEquality =
-///         new BinaryExpression<ParameterExpession, ConstantExpression>(
+///         new BinaryExpression<ParameterExpression, ConstantExpression>(
 ///             new ParameterExpression('a'),
 ///             new ConstantExpression(1)
 ///         );
@@ -40,7 +40,7 @@ import 'expression_type.dart';
 /// (b == 2) the following code can be used.
 ///
 ///     var bEquality =
-///         new BinaryExpression<ParameterExpession, ConstantExpression>(
+///         new BinaryExpression<ParameterExpression, ConstantExpression>(
 ///             new ParameterExpression('b'),
 ///             new ConstantExpression(2)
 ///         );
@@ -123,17 +123,17 @@ class BinaryExpression<LeftOperand extends Expression, RightOperand extends Expr
   /// code can be used.
   ///
   ///     var aEquality =
-  ///         new BinaryExpression<ParameterExpession, ConstantExpression>(
+  ///         new BinaryExpression<ParameterExpression, ConstantExpression>(
   ///             new ParameterExpression('a'),
   ///             new ConstantExpression(1)
   ///         );
   ///     var bEquality =
-  ///         new BinaryExpression<ParameterExpession, ConstantExpression>(
+  ///         new BinaryExpression<ParameterExpression, ConstantExpression>(
   ///             new ParameterExpression('b'),
   ///             new ConstantExpression(2)
   ///         );
   ///     var cEquality =
-  ///         new BinaryExpression<ParameterExpession, ConstantExpression>(
+  ///         new BinaryExpression<ParameterExpression, ConstantExpression>(
   ///             new ParameterExpression('c'),
   ///             new ConstantExpression(3)
   ///         );
@@ -154,17 +154,17 @@ class BinaryExpression<LeftOperand extends Expression, RightOperand extends Expr
   /// code can be used.
   ///
   ///     var aEquality =
-  ///         new BinaryExpression<ParameterExpession, ConstantExpression>(
+  ///         new BinaryExpression<ParameterExpression, ConstantExpression>(
   ///             new ParameterExpression('a'),
   ///             new ConstantExpression(1)
   ///         );
   ///     var bEquality =
-  ///         new BinaryExpression<ParameterExpession, ConstantExpression>(
+  ///         new BinaryExpression<ParameterExpression, ConstantExpression>(
   ///             new ParameterExpression('b'),
   ///             new ConstantExpression(2)
   ///         );
   ///     var cEquality =
-  ///         new BinaryExpression<ParameterExpession, ConstantExpression>(
+  ///         new BinaryExpression<ParameterExpression, ConstantExpression>(
   ///             new ParameterExpression('c'),
   ///             new ConstantExpression(3)
   ///         );
