@@ -17,7 +17,6 @@ import 'dart:async';
 //---------------------------------------------------------------------
 
 import 'package:dogma_connection/command.dart';
-import 'package:dogma_connection/credentials.dart';
 import 'package:dogma_connection/query.dart';
 
 //---------------------------------------------------------------------
@@ -25,7 +24,6 @@ import 'package:dogma_connection/query.dart';
 //---------------------------------------------------------------------
 
 export 'package:dogma_connection/command.dart';
-export 'package:dogma_connection/credentials.dart';
 export 'package:dogma_connection/query.dart';
 
 //---------------------------------------------------------------------
