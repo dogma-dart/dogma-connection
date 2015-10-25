@@ -7,6 +7,12 @@
 library dogma_connection.command;
 
 //---------------------------------------------------------------------
+// Imports
+//---------------------------------------------------------------------
+
+import 'src/expression/expression.dart';
+
+//---------------------------------------------------------------------
 // Library contents
 //---------------------------------------------------------------------
 
@@ -15,5 +21,19 @@ library dogma_connection.command;
 /// The [Command] class provides functionality found in the SQL specification.
 /// For some data sources not all functionality may be available.
 class Command {
+  //---------------------------------------------------------------------
+  // Member variables
+  //---------------------------------------------------------------------
 
+  /// The table to query within the database.
+  final String table;
+  /// An expression representing the criteria for the values requested in the query.
+  Expression where;
+
+  //---------------------------------------------------------------------
+  // Construction
+  //---------------------------------------------------------------------
+
+  /// Creates an instance of the [Command] class targeting the given [table].
+  Command(this.table);
 }
