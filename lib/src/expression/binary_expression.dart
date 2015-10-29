@@ -177,13 +177,21 @@ class BinaryExpression<LeftOperand extends Expression, RightOperand extends Expr
   /// Creates a [BinaryExpression] which chains together and operations from the list of [expressions] with the given [type].
   factory BinaryExpression._chainExpressions(List<Expression> expressions, ExpressionType type) {
     var size = expressions.length;
-    var temp = expressions[size - 1];
+    var right = expressions[size - 1] as RightOperand;
 
     for (var i = size - 2; i >= 1; --i) {
-      temp = new BinaryExpression._internal(expressions[i], temp, type);
+      right = new BinaryExpression<LeftOperand, RightOperand>._internal(
+          expressions[i] as LeftOperand,
+          right,
+          type
+      ) as RightOperand;
     }
 
-    return new BinaryExpression._internal(expressions[0], temp, type);
+    return new BinaryExpression._internal(
+        expressions[0] as LeftOperand,
+        right,
+        type
+    );
   }
 
   //---------------------------------------------------------------------
