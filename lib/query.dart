@@ -38,7 +38,7 @@ class Query {
   ///
   /// If the list is empty then the query assumes that all fields should be
   /// delivered.
-  final List<String> fields = new List<String>();
+  final List<String> fields = <String>[];
   /// The offset into the results of the query.
   ///
   /// Used in conjunction with [limit] to specify a range of results to return
