@@ -3,9 +3,6 @@
 // Use of this source code is governed by a zlib license that can be found in
 // the LICENSE file.
 
-/// Contains the [ExpressionType] enumeration and some helper methods around it.
-library dogma_connection.src.expression.expression_type;
-
 //---------------------------------------------------------------------
 // Library contents
 //---------------------------------------------------------------------

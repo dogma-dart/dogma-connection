@@ -3,9 +3,6 @@
 // Use of this source code is governed by a zlib license that can be found in
 // the LICENSE file.
 
-/// Contains the [ParameterExpression] class.
-library dogma_connection.src.expression.parameter_expression;
-
 //---------------------------------------------------------------------
 // Imports
 //---------------------------------------------------------------------
