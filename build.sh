@@ -1,6 +1,11 @@
-set -e
+#!/bin/sh
+set -ex
 
+# Get version
+dart --version
+
+# Get dependencies
 pub install
 
-pub global activate linter
-pub global run linter .
+# Verify that the libraries are error and warning-free.
+dartanalyzer ${DARTANALYZER_FLAGS} $(ls lib)
