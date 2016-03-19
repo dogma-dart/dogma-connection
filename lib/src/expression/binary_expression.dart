@@ -3,9 +3,6 @@
 // Use of this source code is governed by a zlib license that can be found in
 // the LICENSE file.
 
-/// Contains the [BinaryExpression] class.
-library dogma_connection.src.expression.binary_expression;
-
 //---------------------------------------------------------------------
 // Imports
 //---------------------------------------------------------------------
@@ -61,8 +58,9 @@ class BinaryExpression<LeftOperand extends Expression, RightOperand extends Expr
   // Construction
   //---------------------------------------------------------------------
 
-  /// Creates a [BinaryExpression] with the given [left] and [right] operands of [nodeType].
-  BinaryExpression._internal(this.left, this.right, this.nodeType);
+  /// Creates a [BinaryExpression] with the given [left] and [right] operands
+  /// of [nodeType].
+  BinaryExpression._(this.left, this.right, this.nodeType);
 
   /// Creates a [BinaryExpression] representing an equality operation.
   ///
@@ -82,7 +80,8 @@ class BinaryExpression<LeftOperand extends Expression, RightOperand extends Expr
   BinaryExpression.lessThan(this.left, this.right)
       : nodeType = ExpressionType.lessThan;
 
-  /// Creates a [BinaryExpression] representing a less than or equal to operation.
+  /// Creates a [BinaryExpression] representing a less than or equal to
+  /// operation.
   ///
   /// The [nodeType] for an instance will be [ExpressionType.lessThanOrEqual].
   BinaryExpression.lessThanOrEqual(this.left, this.right)
@@ -94,7 +93,8 @@ class BinaryExpression<LeftOperand extends Expression, RightOperand extends Expr
   BinaryExpression.greaterThan(this.left, this.right)
       : nodeType = ExpressionType.greaterThan;
 
-  /// Creates a [BinaryExpression] representing a greater than or equal to operation.
+  /// Creates a [BinaryExpression] representing a greater than or equal to
+  /// operation.
   ///
   /// The [nodeType] for an instance will be [ExpressionType.greaterThanOrEqual].
   BinaryExpression.greaterThanOrEqual(this.left, this.right)
@@ -112,7 +112,8 @@ class BinaryExpression<LeftOperand extends Expression, RightOperand extends Expr
   BinaryExpression.or(this.left, this.right)
       : nodeType = ExpressionType.or;
 
-  /// Creates a [BinaryExpression] which chains together and operations from the list of [expressions].
+  /// Creates a [BinaryExpression] which chains together and operations from
+  /// the list of [expressions].
   ///
   /// This constructor allows the grafting together of multiple expressions
   /// which are separated by and statements. If the length of the list of
@@ -139,9 +140,9 @@ class BinaryExpression<LeftOperand extends Expression, RightOperand extends Expr
   ///         );
   ///
   ///     var combined = new BinaryExpression.andFromList([aEquality, bEquality, cEquality]);
-  factory BinaryExpression.andFromList(List<Expression> expressions) {
-    return new BinaryExpression._chainExpressions(expressions, ExpressionType.and);
-  }
+  factory BinaryExpression.andFromList(List<Expression> expressions) =>
+      new BinaryExpression<LeftOperand, RightOperand>.
+          _chainExpressions(expressions, ExpressionType.and);
 
   /// Creates a [BinaryExpression] which chains together or operations from the list of [expressions].
   ///
@@ -170,24 +171,26 @@ class BinaryExpression<LeftOperand extends Expression, RightOperand extends Expr
   ///         );
   ///
   ///     var combined = new BinaryExpression.orFromList([aEquality, bEquality, cEquality]);
-  factory BinaryExpression.orFromList(List<Expression> expressions) {
-    return new BinaryExpression._chainExpressions(expressions, ExpressionType.or);
-  }
+  factory BinaryExpression.orFromList(List<Expression> expressions) =>
+      new BinaryExpression<LeftOperand, RightOperand>.
+          _chainExpressions(expressions, ExpressionType.or);
 
-  /// Creates a [BinaryExpression] which chains together and operations from the list of [expressions] with the given [type].
-  factory BinaryExpression._chainExpressions(List<Expression> expressions, ExpressionType type) {
+  /// Creates a [BinaryExpression] which chains together and operations from
+  /// the list of [expressions] with the given [type].
+  factory BinaryExpression._chainExpressions(List<Expression> expressions,
+                                             ExpressionType type) {
     var size = expressions.length;
     var right = expressions[size - 1] as RightOperand;
 
     for (var i = size - 2; i >= 1; --i) {
-      right = new BinaryExpression<LeftOperand, RightOperand>._internal(
+      right = new BinaryExpression<LeftOperand, RightOperand>._(
           expressions[i] as LeftOperand,
           right,
           type
       ) as RightOperand;
     }
 
-    return new BinaryExpression._internal(
+    return new BinaryExpression<LeftOperand, RightOperand>._(
         expressions[0] as LeftOperand,
         right,
         type
