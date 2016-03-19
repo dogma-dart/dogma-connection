@@ -151,7 +151,7 @@ class BinaryExpression<LeftOperand extends Expression, RightOperand extends Expr
   /// [expressions] is 2 then this functions the same as the
   /// [BinaryExpression.or] constructor.
   ///
-  /// To generate the expression (a == 1) && (b == 2) && (c == 3) the following
+  /// To generate the expression (a == 1) || (b == 2) || (c == 3) the following
   /// code can be used.
   ///
   ///     var aEquality =
